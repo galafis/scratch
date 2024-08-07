@@ -1,0 +1,21 @@
+quando [bandeira verde v] for clicada
+limpar
+definir cor da caneta para (azul)
+levantar a caneta
+ir para x: (0) y: (0)
+abaixar a caneta
+Koch (300) (4)
+
+define Koch [tamanho v] [profundidade v]
+se <(profundidade) = 0> então
+    avance (tamanho) passos
+senão
+    definir [lado v] para (tamanho / 3)
+    Koch (lado) (profundidade - 1)
+    vire ↺ (60) graus
+    Koch (lado) (profundidade - 1)
+    vire ↻ (120) graus
+    Koch (lado) (profundidade - 1)
+    vire ↺ (60) graus
+    Koch (lado) (profundidade - 1)
+end
